@@ -1,0 +1,6 @@
+framework module UIMSDK {
+  umbrella header "UIMSDK.h"
+
+  export *
+  module * { export * }
+}
