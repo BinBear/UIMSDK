@@ -60,7 +60,7 @@ typedef NS_ENUM(long, UIMErrorCode) {
 /**
  *  A `UIMClientConnecttionState` value representation current connection state.
  */
-@property (nonatomic, readonly) UIMClientConnecttionState connectionState;
+@property (nonatomic, readonly) UIMClientConnecttionState uim_connectionState;
 
 ///-------------------------------
 /// @name Ititializer
@@ -83,7 +83,7 @@ typedef NS_ENUM(long, UIMErrorCode) {
  *
  *  @param urlString The string value representation server's address
  */
-- (void)connect:(NSString *)urlString;
+- (void)uim_connect:(NSString *)urlString;
 
 /**
  *  Disconnect with SignalR server's connection.
@@ -122,12 +122,12 @@ typedef NS_ENUM(long, UIMErrorCode) {
  *
  *  @return A string value representation unique message id.
  */
-- (NSString *)sendMessage:(NSString *)text;
+- (NSString *)uim_sendMessage:(NSString *)text;
 
 /**
  *  Finish a communication with agent.
  */
-- (void)endChat;
+- (void)uim_endChat;
 
 ///-------------------------------
 /// @name File Transfer

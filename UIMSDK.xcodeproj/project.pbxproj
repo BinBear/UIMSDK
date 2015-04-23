@@ -22,27 +22,29 @@
 
 /* Begin PBXBuildFile section */
 		6431B4D6A7D3E204C8C1D585 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992457CD6978E47D681F11B6 /* libPods.a */; };
-		9C152C32F5932E0D56B45DDE /* libPods-UIMSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A786F502D324111E12BAB2 /* libPods-UIMSDKTests.a */; };
-		F22DAE0D1A6D0A5200BED862 /* WaitingForAgentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F22DAE0C1A6D0A5200BED862 /* WaitingForAgentTest.m */; };
 		F238192F1A6641B400748A5E /* UIMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F238192A1A6641B400748A5E /* UIMClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F23819301A6641B400748A5E /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192B1A6641B400748A5E /* UIMClient.m */; };
 		F23819321A6641B400748A5E /* UIMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F238192C1A6641B400748A5E /* UIMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F23819331A6641B400748A5E /* UIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = F238192D1A6641B400748A5E /* UIMService.h */; };
 		F23819341A6641B400748A5E /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192E1A6641B400748A5E /* UIMService.m */; };
-		F24C64EE1A67C2B0002FF5F7 /* ConnectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F24C64ED1A67C2B0002FF5F7 /* ConnectionTest.m */; };
-		F24C64F11A67C7BF002FF5F7 /* UIMSDKTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F24C64F01A67C7BF002FF5F7 /* UIMSDKTestCase.m */; };
-		F2CED49C1A61AA51001B9B25 /* UIMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CED4901A61AA50001B9B25 /* UIMSDK.framework */; };
+		F2F81FCB1AE92E16007CF472 /* UIMClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F238192A1A6641B400748A5E /* UIMClient.h */; };
+		F2F81FCF1AE92E4A007CF472 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192B1A6641B400748A5E /* UIMClient.m */; };
+		F2F81FD01AE92E4A007CF472 /* UIMService.h in Sources */ = {isa = PBXBuildFile; fileRef = F238192D1A6641B400748A5E /* UIMService.h */; };
+		F2F81FD11AE92E4A007CF472 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192E1A6641B400748A5E /* UIMService.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F2CED49D1A61AA51001B9B25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2CED4871A61AA50001B9B25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F2CED48F1A61AA50001B9B25;
-			remoteInfo = UIMSDK;
+/* Begin PBXCopyFilesBuildPhase section */
+		F2F81FB21AE92DE3007CF472 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F2F81FCB1AE92E16007CF472 /* UIMClient.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		57A786F502D324111E12BAB2 /* libPods-UIMSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIMSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +64,9 @@
 		F24C64F01A67C7BF002FF5F7 /* UIMSDKTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMSDKTestCase.m; sourceTree = "<group>"; };
 		F2CED4901A61AA50001B9B25 /* UIMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CED4941A61AA50001B9B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2CED49B1A61AA51001B9B25 /* UIMSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIMSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CED4A11A61AA51001B9B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2F81FB41AE92DE3007CF472 /* liblibUIMSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibUIMSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F81FC41AE92DE3007CF472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +78,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2CED4981A61AA51001B9B25 /* Frameworks */ = {
+		F2F81FB11AE92DE3007CF472 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2CED49C1A61AA51001B9B25 /* UIMSDK.framework in Frameworks */,
-				9C152C32F5932E0D56B45DDE /* libPods-UIMSDKTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +125,8 @@
 			children = (
 				F2CED4921A61AA50001B9B25 /* UIMSDK */,
 				F2CED49F1A61AA51001B9B25 /* UIMSDKTests */,
+				F2F81FB51AE92DE3007CF472 /* libUIMSDK */,
+				F2F81FC21AE92DE3007CF472 /* libUIMSDKTests */,
 				F2CED4911A61AA50001B9B25 /* Products */,
 				42BED76E2326211E0A7C0FD2 /* Pods */,
 				82C469B738E2450DF57B6305 /* Frameworks */,
@@ -134,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F2CED4901A61AA50001B9B25 /* UIMSDK.framework */,
-				F2CED49B1A61AA51001B9B25 /* UIMSDKTests.xctest */,
+				F2F81FB41AE92DE3007CF472 /* liblibUIMSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +179,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F2F81FB51AE92DE3007CF472 /* libUIMSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libUIMSDK;
+			sourceTree = "<group>";
+		};
+		F2F81FC21AE92DE3007CF472 /* libUIMSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2F81FC31AE92DE3007CF472 /* Supporting Files */,
+			);
+			path = libUIMSDKTests;
+			sourceTree = "<group>";
+		};
+		F2F81FC31AE92DE3007CF472 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2F81FC41AE92DE3007CF472 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -212,25 +238,22 @@
 			productReference = F2CED4901A61AA50001B9B25 /* UIMSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F2CED49A1A61AA51001B9B25 /* UIMSDKTests */ = {
+		F2F81FB31AE92DE3007CF472 /* libUIMSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2CED4A91A61AA51001B9B25 /* Build configuration list for PBXNativeTarget "UIMSDKTests" */;
+			buildConfigurationList = F2F81FC91AE92DE3007CF472 /* Build configuration list for PBXNativeTarget "libUIMSDK" */;
 			buildPhases = (
-				96131F7712ED09A502BEB442 /* Check Pods Manifest.lock */,
-				F2CED4971A61AA51001B9B25 /* Sources */,
-				F2CED4981A61AA51001B9B25 /* Frameworks */,
-				F2CED4991A61AA51001B9B25 /* Resources */,
-				058F48CFDA23B9624941C3E7 /* Copy Pods Resources */,
+				F2F81FB01AE92DE3007CF472 /* Sources */,
+				F2F81FB11AE92DE3007CF472 /* Frameworks */,
+				F2F81FB21AE92DE3007CF472 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F2CED49E1A61AA51001B9B25 /* PBXTargetDependency */,
 			);
-			name = UIMSDKTests;
-			productName = UIMSDKTests;
-			productReference = F2CED49B1A61AA51001B9B25 /* UIMSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = libUIMSDK;
+			productName = libUIMSDK;
+			productReference = F2F81FB41AE92DE3007CF472 /* liblibUIMSDK.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -247,8 +270,8 @@
 					F2CED48F1A61AA50001B9B25 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					F2CED49A1A61AA51001B9B25 = {
-						CreatedOnToolsVersion = 6.1.1;
+					F2F81FB31AE92DE3007CF472 = {
+						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
@@ -265,8 +288,8 @@
 			projectRoot = "";
 			targets = (
 				F2CED48F1A61AA50001B9B25 /* UIMSDK */,
-				F2CED49A1A61AA51001B9B25 /* UIMSDKTests */,
 				F2AEF1FC1A61ACF900884537 /* UIMSDK-Universal */,
+				F2F81FB31AE92DE3007CF472 /* libUIMSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -279,46 +302,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2CED4991A61AA51001B9B25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		058F48CFDA23B9624941C3E7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIMSDKTests/Pods-UIMSDKTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96131F7712ED09A502BEB442 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		CB9720BB10C801731DFB3079 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,25 +360,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2CED4971A61AA51001B9B25 /* Sources */ = {
+		F2F81FB01AE92DE3007CF472 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22DAE0D1A6D0A5200BED862 /* WaitingForAgentTest.m in Sources */,
-				F24C64EE1A67C2B0002FF5F7 /* ConnectionTest.m in Sources */,
-				F24C64F11A67C7BF002FF5F7 /* UIMSDKTestCase.m in Sources */,
+				F2F81FCF1AE92E4A007CF472 /* UIMClient.m in Sources */,
+				F2F81FD01AE92E4A007CF472 /* UIMService.h in Sources */,
+				F2F81FD11AE92E4A007CF472 /* UIMService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F2CED49E1A61AA51001B9B25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F2CED48F1A61AA50001B9B25 /* UIMSDK */;
-			targetProxy = F2CED49D1A61AA51001B9B25 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F2AEF1FE1A61ACF900884537 /* Debug */ = {
@@ -499,7 +477,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CURRENT_PROJECT_VERSION = 1.8;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -507,7 +485,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -518,7 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CC3FF33C05B2B430070EC68 /* Pods.release.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CURRENT_PROJECT_VERSION = 1.8;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -526,47 +504,39 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIMSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		F2CED4AA1A61AA51001B9B25 /* Debug */ = {
+		F2F81FC51AE92DE3007CF472 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB790C80B3DE54C95C9E13F3 /* Pods-UIMSDKTests.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = UIMSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UIMSDKTest/UIMSDKTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		F2CED4AB1A61AA51001B9B25 /* Release */ = {
+		F2F81FC61AE92DE3007CF472 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 660EE13649365F228D23D58E /* Pods-UIMSDKTests.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UIMSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UIMSDKTest/UIMSDKTests-Bridging-Header.h";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -600,14 +570,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2CED4A91A61AA51001B9B25 /* Build configuration list for PBXNativeTarget "UIMSDKTests" */ = {
+		F2F81FC91AE92DE3007CF472 /* Build configuration list for PBXNativeTarget "libUIMSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F2CED4AA1A61AA51001B9B25 /* Debug */,
-				F2CED4AB1A61AA51001B9B25 /* Release */,
+				F2F81FC51AE92DE3007CF472 /* Debug */,
+				F2F81FC61AE92DE3007CF472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -98,16 +98,16 @@
 }
 
 #pragma mark - Getter
-- (UIMClientConnecttionState)connectionState {
+- (UIMClientConnecttionState)uim_connectionState {
   return self.service.connectionState;
 }
 
 #pragma mark - Connection
-- (void)connect:(NSString *)urlString {
+- (void)uim_connect:(NSString *)urlString {
   NSParameterAssert(urlString);
   
-  if (self.connectionState == UIMClientConnecttionStateDisconnected) {
-    [self.service connect:urlString];
+  if (self.uim_connectionState == UIMClientConnecttionStateDisconnected) {
+    [self.service uim_connect:urlString];
   } else {
     NSLog(@"You already connected.");
   }
@@ -115,7 +115,7 @@
 }
 
 - (void)disconnect {
-  if (self.connectionState == UIMClientConnecttionStateConnected) {
+  if (self.uim_connectionState == UIMClientConnecttionStateConnected) {
     [self.service disconnect];
   } else {
     NSLog(@"You are not connect yet.");
@@ -145,13 +145,13 @@
   
 }
 
-- (void)endChat {
+- (void)uim_endChat {
   if (![self.service endChat]) {
     NSLog(@"You haven't start a conversation yet.");
   }
 }
 
-- (NSString *)sendMessage:(NSString *)text {
+- (NSString *)uim_sendMessage:(NSString *)text {
   NSParameterAssert(text);
   return [self.service sendMessage:text];
 }
@@ -240,7 +240,7 @@
 
 #pragma mark - Connection State
 - (void)positionRequest {
-  if (self.connectionState == UIMClientConnecttionStateConnected) {
+  if (self.uim_connectionState == UIMClientConnecttionStateConnected) {
     [self.service requestPosition];
   } else {
     NSLog(@"You must be connect to server.");

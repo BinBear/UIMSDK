@@ -32,7 +32,7 @@
 @property (nonatomic, strong, readonly) RACSignal *disconnectSignal;
 
 - (instancetype)initWithTenantId:(NSString *)tenantId;
-- (void)connect:(NSString *)urlString;
+- (void)uim_connect:(NSString *)urlString;
 - (void)disconnect;
 - (void)beginChatWithChannel:(NSString *)channel
                       custID:(NSString *)custID

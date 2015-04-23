@@ -7,8 +7,3 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod 'SignalR-ObjC', '~>2.0.0.alpha1'
 pod 'ReactiveCocoa'
 
-target :UIMSDKTests do
-  pod 'Expecta'
-  pod 'OCMock'
-end
-

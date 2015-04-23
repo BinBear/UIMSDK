@@ -190,7 +190,7 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
 }
 
 #pragma mark - Connection
-- (void)connect:(NSString *)urlString {
+- (void)uim_connect:(NSString *)urlString {
   
   ///--------------------
   /// @name AFNetworking initialize
