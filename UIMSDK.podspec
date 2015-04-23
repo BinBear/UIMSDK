@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UIMSDK"
-  s.version      = "0.0.1"
+  s.version      = "1.9"
   s.summary      = "SignalR framework create by devpro."
   s.homepage     = "https://github.com/retsohuang/UIMSDK"
   s.license      = "Apache License 2.0"
