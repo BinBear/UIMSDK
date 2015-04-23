@@ -22,29 +22,11 @@
 
 /* Begin PBXBuildFile section */
 		6431B4D6A7D3E204C8C1D585 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992457CD6978E47D681F11B6 /* libPods.a */; };
-		F238192F1A6641B400748A5E /* UIMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F238192A1A6641B400748A5E /* UIMClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F23819301A6641B400748A5E /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192B1A6641B400748A5E /* UIMClient.m */; };
-		F23819321A6641B400748A5E /* UIMSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F238192C1A6641B400748A5E /* UIMSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F23819331A6641B400748A5E /* UIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = F238192D1A6641B400748A5E /* UIMService.h */; };
-		F23819341A6641B400748A5E /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192E1A6641B400748A5E /* UIMService.m */; };
-		F2F81FCB1AE92E16007CF472 /* UIMClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F238192A1A6641B400748A5E /* UIMClient.h */; };
-		F2F81FCF1AE92E4A007CF472 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192B1A6641B400748A5E /* UIMClient.m */; };
-		F2F81FD01AE92E4A007CF472 /* UIMService.h in Sources */ = {isa = PBXBuildFile; fileRef = F238192D1A6641B400748A5E /* UIMService.h */; };
-		F2F81FD11AE92E4A007CF472 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F238192E1A6641B400748A5E /* UIMService.m */; };
+		F2B73A561AE93867009AFCE9 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B73A511AE93867009AFCE9 /* UIMClient.m */; };
+		F2B73A571AE93867009AFCE9 /* UIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = F2B73A521AE93867009AFCE9 /* UIMService.h */; };
+		F2B73A581AE93867009AFCE9 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B73A531AE93867009AFCE9 /* UIMService.m */; };
+		F2B73A591AE93867009AFCE9 /* UIMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F2B73A551AE93867009AFCE9 /* UIMClient.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F2F81FB21AE92DE3007CF472 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				F2F81FCB1AE92E16007CF472 /* UIMClient.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		57A786F502D324111E12BAB2 /* libPods-UIMSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIMSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,20 +35,12 @@
 		992457CD6978E47D681F11B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB790C80B3DE54C95C9E13F3 /* Pods-UIMSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIMSDKTests/Pods-UIMSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F22DAE0C1A6D0A5200BED862 /* WaitingForAgentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingForAgentTest.m; sourceTree = "<group>"; };
-		F238192A1A6641B400748A5E /* UIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMClient.h; sourceTree = "<group>"; };
-		F238192B1A6641B400748A5E /* UIMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMClient.m; sourceTree = "<group>"; };
-		F238192C1A6641B400748A5E /* UIMSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMSDK.h; sourceTree = "<group>"; };
-		F238192D1A6641B400748A5E /* UIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMService.h; sourceTree = "<group>"; };
-		F238192E1A6641B400748A5E /* UIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMService.m; sourceTree = "<group>"; };
-		F24C64ED1A67C2B0002FF5F7 /* ConnectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionTest.m; sourceTree = "<group>"; };
-		F24C64EF1A67C7BF002FF5F7 /* UIMSDKTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMSDKTestCase.h; sourceTree = "<group>"; };
-		F24C64F01A67C7BF002FF5F7 /* UIMSDKTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMSDKTestCase.m; sourceTree = "<group>"; };
+		F2B73A511AE93867009AFCE9 /* UIMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMClient.m; sourceTree = "<group>"; };
+		F2B73A521AE93867009AFCE9 /* UIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMService.h; sourceTree = "<group>"; };
+		F2B73A531AE93867009AFCE9 /* UIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMService.m; sourceTree = "<group>"; };
+		F2B73A551AE93867009AFCE9 /* UIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMClient.h; sourceTree = "<group>"; };
 		F2CED4901A61AA50001B9B25 /* UIMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CED4941A61AA50001B9B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2CED4A11A61AA51001B9B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2F81FB41AE92DE3007CF472 /* liblibUIMSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibUIMSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2F81FC41AE92DE3007CF472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +49,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6431B4D6A7D3E204C8C1D585 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2F81FB11AE92DE3007CF472 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,25 +75,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F23819291A6641B400748A5E /* Classes */ = {
+		F2B73A4F1AE93867009AFCE9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F238192A1A6641B400748A5E /* UIMClient.h */,
-				F238192B1A6641B400748A5E /* UIMClient.m */,
-				F238192C1A6641B400748A5E /* UIMSDK.h */,
-				F238192D1A6641B400748A5E /* UIMService.h */,
-				F238192E1A6641B400748A5E /* UIMService.m */,
+				F2B73A501AE93867009AFCE9 /* Private */,
+				F2B73A541AE93867009AFCE9 /* Public */,
 			);
-			path = Classes;
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		F2B73A501AE93867009AFCE9 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				F2B73A511AE93867009AFCE9 /* UIMClient.m */,
+				F2B73A521AE93867009AFCE9 /* UIMService.h */,
+				F2B73A531AE93867009AFCE9 /* UIMService.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		F2B73A541AE93867009AFCE9 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				F2B73A551AE93867009AFCE9 /* UIMClient.h */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		F2CED4861A61AA50001B9B25 = {
 			isa = PBXGroup;
 			children = (
 				F2CED4921A61AA50001B9B25 /* UIMSDK */,
-				F2CED49F1A61AA51001B9B25 /* UIMSDKTests */,
-				F2F81FB51AE92DE3007CF472 /* libUIMSDK */,
-				F2F81FC21AE92DE3007CF472 /* libUIMSDKTests */,
 				F2CED4911A61AA50001B9B25 /* Products */,
 				42BED76E2326211E0A7C0FD2 /* Pods */,
 				82C469B738E2450DF57B6305 /* Frameworks */,
@@ -137,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				F2CED4901A61AA50001B9B25 /* UIMSDK.framework */,
-				F2F81FB41AE92DE3007CF472 /* liblibUIMSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,7 +123,7 @@
 		F2CED4921A61AA50001B9B25 /* UIMSDK */ = {
 			isa = PBXGroup;
 			children = (
-				F23819291A6641B400748A5E /* Classes */,
+				F2B73A4F1AE93867009AFCE9 /* Source */,
 				F2CED4931A61AA50001B9B25 /* Supporting Files */,
 			);
 			path = UIMSDK;
@@ -159,49 +137,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2CED49F1A61AA51001B9B25 /* UIMSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				F24C64ED1A67C2B0002FF5F7 /* ConnectionTest.m */,
-				F2CED4A01A61AA51001B9B25 /* Supporting Files */,
-				F24C64EF1A67C7BF002FF5F7 /* UIMSDKTestCase.h */,
-				F24C64F01A67C7BF002FF5F7 /* UIMSDKTestCase.m */,
-				F22DAE0C1A6D0A5200BED862 /* WaitingForAgentTest.m */,
-			);
-			path = UIMSDKTests;
-			sourceTree = "<group>";
-		};
-		F2CED4A01A61AA51001B9B25 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F2CED4A11A61AA51001B9B25 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F2F81FB51AE92DE3007CF472 /* libUIMSDK */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = libUIMSDK;
-			sourceTree = "<group>";
-		};
-		F2F81FC21AE92DE3007CF472 /* libUIMSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				F2F81FC31AE92DE3007CF472 /* Supporting Files */,
-			);
-			path = libUIMSDKTests;
-			sourceTree = "<group>";
-		};
-		F2F81FC31AE92DE3007CF472 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F2F81FC41AE92DE3007CF472 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -209,9 +144,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23819321A6641B400748A5E /* UIMSDK.h in Headers */,
-				F238192F1A6641B400748A5E /* UIMClient.h in Headers */,
-				F23819331A6641B400748A5E /* UIMService.h in Headers */,
+				F2B73A571AE93867009AFCE9 /* UIMService.h in Headers */,
+				F2B73A591AE93867009AFCE9 /* UIMClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,23 +172,6 @@
 			productReference = F2CED4901A61AA50001B9B25 /* UIMSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F2F81FB31AE92DE3007CF472 /* libUIMSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F2F81FC91AE92DE3007CF472 /* Build configuration list for PBXNativeTarget "libUIMSDK" */;
-			buildPhases = (
-				F2F81FB01AE92DE3007CF472 /* Sources */,
-				F2F81FB11AE92DE3007CF472 /* Frameworks */,
-				F2F81FB21AE92DE3007CF472 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = libUIMSDK;
-			productName = libUIMSDK;
-			productReference = F2F81FB41AE92DE3007CF472 /* liblibUIMSDK.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,9 +186,6 @@
 					};
 					F2CED48F1A61AA50001B9B25 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					F2F81FB31AE92DE3007CF472 = {
-						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
@@ -289,7 +203,6 @@
 			targets = (
 				F2CED48F1A61AA50001B9B25 /* UIMSDK */,
 				F2AEF1FC1A61ACF900884537 /* UIMSDK-Universal */,
-				F2F81FB31AE92DE3007CF472 /* libUIMSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -355,18 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23819301A6641B400748A5E /* UIMClient.m in Sources */,
-				F23819341A6641B400748A5E /* UIMService.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2F81FB01AE92DE3007CF472 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2F81FCF1AE92E4A007CF472 /* UIMClient.m in Sources */,
-				F2F81FD01AE92E4A007CF472 /* UIMService.h in Sources */,
-				F2F81FD11AE92E4A007CF472 /* UIMService.m in Sources */,
+				F2B73A561AE93867009AFCE9 /* UIMClient.m in Sources */,
+				F2B73A581AE93867009AFCE9 /* UIMService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,35 +414,6 @@
 			};
 			name = Release;
 		};
-		F2F81FC51AE92DE3007CF472 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F2F81FC61AE92DE3007CF472 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,14 +443,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		F2F81FC91AE92DE3007CF472 /* Build configuration list for PBXNativeTarget "libUIMSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F2F81FC51AE92DE3007CF472 /* Debug */,
-				F2F81FC61AE92DE3007CF472 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
