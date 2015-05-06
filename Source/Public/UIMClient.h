@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Devpro. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol UIMClientDelegate;
 

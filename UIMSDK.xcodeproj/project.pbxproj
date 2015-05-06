@@ -22,9 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		6431B4D6A7D3E204C8C1D585 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992457CD6978E47D681F11B6 /* libPods.a */; };
-		F2B73A561AE93867009AFCE9 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B73A511AE93867009AFCE9 /* UIMClient.m */; };
-		F2B73A571AE93867009AFCE9 /* UIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = F2B73A521AE93867009AFCE9 /* UIMService.h */; };
-		F2B73A581AE93867009AFCE9 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B73A531AE93867009AFCE9 /* UIMService.m */; };
+		F20816681AF9F71C001076F0 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F20816651AF9F71C001076F0 /* UIMClient.m */; };
+		F20816691AF9F71C001076F0 /* UIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = F20816661AF9F71C001076F0 /* UIMService.h */; };
+		F208166A1AF9F71C001076F0 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F20816671AF9F71C001076F0 /* UIMService.m */; };
 		F2B73A591AE93867009AFCE9 /* UIMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F2B73A551AE93867009AFCE9 /* UIMClient.h */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +35,9 @@
 		992457CD6978E47D681F11B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB790C80B3DE54C95C9E13F3 /* Pods-UIMSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIMSDKTests/Pods-UIMSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F2B73A511AE93867009AFCE9 /* UIMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMClient.m; sourceTree = "<group>"; };
-		F2B73A521AE93867009AFCE9 /* UIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMService.h; sourceTree = "<group>"; };
-		F2B73A531AE93867009AFCE9 /* UIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMService.m; sourceTree = "<group>"; };
+		F20816651AF9F71C001076F0 /* UIMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMClient.m; path = Source/UIMClient.m; sourceTree = SOURCE_ROOT; };
+		F20816661AF9F71C001076F0 /* UIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMService.h; path = Source/UIMService.h; sourceTree = SOURCE_ROOT; };
+		F20816671AF9F71C001076F0 /* UIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMService.m; path = Source/UIMService.m; sourceTree = SOURCE_ROOT; };
 		F2B73A551AE93867009AFCE9 /* UIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMClient.h; sourceTree = "<group>"; };
 		F2CED4901A61AA50001B9B25 /* UIMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CED4941A61AA50001B9B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,9 +87,9 @@
 		F2B73A501AE93867009AFCE9 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				F2B73A511AE93867009AFCE9 /* UIMClient.m */,
-				F2B73A521AE93867009AFCE9 /* UIMService.h */,
-				F2B73A531AE93867009AFCE9 /* UIMService.m */,
+				F20816651AF9F71C001076F0 /* UIMClient.m */,
+				F20816661AF9F71C001076F0 /* UIMService.h */,
+				F20816671AF9F71C001076F0 /* UIMService.m */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B73A571AE93867009AFCE9 /* UIMService.h in Headers */,
+				F20816691AF9F71C001076F0 /* UIMService.h in Headers */,
 				F2B73A591AE93867009AFCE9 /* UIMClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B73A561AE93867009AFCE9 /* UIMClient.m in Sources */,
-				F2B73A581AE93867009AFCE9 /* UIMService.m in Sources */,
+				F20816681AF9F71C001076F0 /* UIMClient.m in Sources */,
+				F208166A1AF9F71C001076F0 /* UIMService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
