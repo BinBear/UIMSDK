@@ -38,8 +38,6 @@
 		F20A6D7F1B04F88D00A042B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F20A6D811B04F88D00A042B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F20A6D841B04F88D00A042B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F20A6D8F1B04F88D00A042B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F20A6D901B04F88D00A042B9 /* UIMDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIMDemoTests.m; sourceTree = "<group>"; };
 		F20A6D9A1B04F8DA00A042B9 /* UIMIOSMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMIOSMessagesViewController.h; sourceTree = "<group>"; };
 		F20A6D9B1B04F8DA00A042B9 /* UIMIOSMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMIOSMessagesViewController.m; sourceTree = "<group>"; };
 		F20A6D9C1B04F8DA00A042B9 /* UIMIOSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMIOSViewController.h; sourceTree = "<group>"; };
@@ -105,23 +103,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F20A6D8D1B04F88D00A042B9 /* UIMDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				F20A6D901B04F88D00A042B9 /* UIMDemoTests.m */,
-				F20A6D8E1B04F88D00A042B9 /* Supporting Files */,
-			);
-			path = UIMDemoTests;
-			sourceTree = "<group>";
-		};
-		F20A6D8E1B04F88D00A042B9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F20A6D8F1B04F88D00A042B9 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		F20A6D981B04F8DA00A042B9 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +156,6 @@
 			children = (
 				F2CED4921A61AA50001B9B25 /* UIMSDK */,
 				F20A6D731B04F88D00A042B9 /* UIMDemo */,
-				F20A6D8D1B04F88D00A042B9 /* UIMDemoTests */,
 				F2CED4911A61AA50001B9B25 /* Products */,
 				42BED76E2326211E0A7C0FD2 /* Pods */,
 				82C469B738E2450DF57B6305 /* Frameworks */,
