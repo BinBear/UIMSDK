@@ -14,6 +14,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 #import <SignalR-ObjC/SignalR.h>
+#import <SignalR-ObjC/SRLongPollingTransport.h>
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
 
@@ -52,6 +53,7 @@ static NSString * const kUIMMessageErrorMessage = @"Message";
 ///--------------------
 static NSString * const UIMFileUploadPath = @"media/upload";
 static NSString * const UIMFileDownloadPath = @"media/download";
+static NSString * const UIMNSURLBackgroundSessionConfigurationIdentifier = @"com.devpro.backgroundSessionConfiguration";
 static NSString * const kUIMChatId = @"callId";
 static NSString * const kUIMFilename = @"fileName";
 static NSString * const kUIMFileId = @"fileId";
@@ -201,7 +203,12 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
   self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:urlString]];
   self.manager.requestSerializer = requestSerializer;
   
-  NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfiguration:@"Background session configuration"];
+  NSURLSessionConfiguration *sessionConfiguration;
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] > 7.0) {
+    sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfiguration:UIMNSURLBackgroundSessionConfigurationIdentifier];
+  } else {
+    sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:UIMNSURLBackgroundSessionConfigurationIdentifier];
+  }
   sessionConfiguration.timeoutIntervalForResource = UIMTimeoutInterval;
   _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL sessionConfiguration:sessionConfiguration];
   
@@ -229,7 +236,7 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
   [self.hubProxy on:UIMHubEventNameLeave
             perform:self
            selector:@selector(memberLeaveChatWithId:info:)];
-  [self.hubConnection start];
+  [self.hubConnection start:nil];
 }
 
 - (void)reconnect {
@@ -244,12 +251,14 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
 - (void)disconnect {
   [self endChat];
   self.reconnectCount = 0;
+  self.instantId = nil;
   [self.hubConnection disconnect];
 }
 
 - (void)disconnectdHelper {
   self.hubConnection = nil;
   self.hubProxy = nil;
+  self.instantId = nil;
   self.connectionState = UIMClientConnecttionStateDisconnected;
 }
 
@@ -412,7 +421,7 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
     if (self.instantId.length == 0) {
       [self disconnectdHelper];
     } else {
-      if (self.reconnectCount < 5) {
+      if (self.reconnectCount < 12) {
         if (!self.reconnectTimer.isValid) {
           self.reconnectTimer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(reconnect) userInfo:nil repeats:true];
         }
@@ -423,9 +432,10 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
   }
 }
 - (void)SRConnectionDidReconnect:(id<SRConnectionInterface>)connection {
-  if (connection == self.hubConnection) {
+  if (self.instantId) {
     [self.hubProxy invoke:UIMHubEventNameReconnected
                  withArgs:@[self.tenantId, self.instantId]];
+    self.reconnectCount = 0;
   }
 }
 - (void)SRConnection:(id<SRConnectionInterface>)connection didChangeState:(connectionState)oldState newState:(connectionState)newState {
@@ -435,14 +445,14 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
         self.connectionState = UIMClientConnecttionStateDisconnected;
         break;
       case connected:
-        self.reconnectCount = 0;
-        [self.reconnectTimer invalidate];
         self.connectionState = UIMClientConnecttionStateConnected;
         break;
       case connecting:
         self.connectionState = UIMClientConnecttionStateConnecting;
         break;
       case reconnecting:
+        [connection disconnect];
+        NSLog(@"reconnecting");
         self.connectionState = UIMClientConnecttionStateReconnecting;
         break;
       default:

@@ -99,12 +99,11 @@
 }
 - (void)uimClientAgentDidJoinChatWithAgentId:(NSString *)agentId agentName:(NSString *)agentName {
   UIMIOSMessagesViewController *messagesViewController = [UIMIOSMessagesViewController messagesViewController];
+  messagesViewController.senderId = self.nameTextField.text;
+  messagesViewController.senderDisplayName = self.nameTextField.text;
   [messagesViewController setTitle:agentName];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:messagesViewController];
-  [self presentViewController:navigationController animated:YES completion:^{
-    [messagesViewController setSenderId:self.nameTextField.text];
-    [messagesViewController setSenderDisplayName:self.nameTextField.text];
-  }];
+  [self presentViewController:navigationController animated:YES completion:nil];
   NSLog(@"Agent joined, name: %@, agent id: %@", agentName, agentId);
 }
 - (void)uimclientDidFailWithErrorCode:(UIMErrorCode)code message:(NSString *)message {

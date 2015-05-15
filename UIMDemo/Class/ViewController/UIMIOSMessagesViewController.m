@@ -45,6 +45,8 @@
   
   self.messages = [@[] mutableCopy];
   
+  self.senderId = [[NSUUID UUID] UUIDString];
+  
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelChatButtonTapped)];
   
   [[[UIMSDKService sharedService] client] setDelegate:self];

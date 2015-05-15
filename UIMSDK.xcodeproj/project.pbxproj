@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89433FCFEF30F3F3340050B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992457CD6978E47D681F11B6 /* libPods.a */; };
 		F20A6D771B04F88D00A042B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D761B04F88D00A042B9 /* main.m */; };
 		F20A6D7A1B04F88D00A042B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D791B04F88D00A042B9 /* AppDelegate.m */; };
 		F20A6D801B04F88D00A042B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20A6D7E1B04F88D00A042B9 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		F20A6DA01B04F8DA00A042B9 /* UIMIOSMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D9B1B04F8DA00A042B9 /* UIMIOSMessagesViewController.m */; };
 		F20A6DA11B04F8DA00A042B9 /* UIMIOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D9D1B04F8DA00A042B9 /* UIMIOSViewController.m */; };
 		F20A6DA21B04F8DA00A042B9 /* UIMSDKService.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D9F1B04F8DA00A042B9 /* UIMSDKService.m */; };
+		F255F87E1B0517850041C245 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F20816671AF9F71C001076F0 /* UIMService.m */; };
+		F255F87F1B0517880041C245 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F20816651AF9F71C001076F0 /* UIMClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89433FCFEF30F3F3340050B4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F20A6D961B04F88D00A042B9 /* Build configuration list for PBXNativeTarget "UIMDemo" */;
 			buildPhases = (
+				8CF4F8DBDD40B0B140134C16 /* Check Pods Manifest.lock */,
 				F20A6D6E1B04F88D00A042B9 /* Sources */,
 				F20A6D6F1B04F88D00A042B9 /* Frameworks */,
 				F20A6D701B04F88D00A042B9 /* Resources */,
+				5FEA0928091F00727D42354C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,15 +274,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FEA0928091F00727D42354C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF4F8DBDD40B0B140134C16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F20A6D6E1B04F88D00A042B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F20A6D7A1B04F88D00A042B9 /* AppDelegate.m in Sources */,
+				F255F87E1B0517850041C245 /* UIMService.m in Sources */,
 				F20A6DA01B04F8DA00A042B9 /* UIMIOSMessagesViewController.m in Sources */,
 				F20A6D771B04F88D00A042B9 /* main.m in Sources */,
 				F20A6DA21B04F8DA00A042B9 /* UIMSDKService.m in Sources */,
+				F255F87F1B0517880041C245 /* UIMClient.m in Sources */,
 				F20A6DA11B04F8DA00A042B9 /* UIMIOSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,9 +346,11 @@
 /* Begin XCBuildConfiguration section */
 		F20A6D921B04F88D00A042B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Retso Huang (HDE8DFEJF5)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -318,14 +361,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73358578-f531-4f2d-99be-fc01a1b5b721";
 			};
 			name = Debug;
 		};
 		F20A6D931B04F88D00A042B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC3FF33C05B2B430070EC68 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Retso Huang (HDE8DFEJF5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -333,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73358578-f531-4f2d-99be-fc01a1b5b721";
 			};
 			name = Release;
 		};
@@ -430,6 +477,7 @@
 				F20A6D931B04F88D00A042B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2CED48A1A61AA50001B9B25 /* Build configuration list for PBXProject "UIMSDK" */ = {
 			isa = XCConfigurationList;

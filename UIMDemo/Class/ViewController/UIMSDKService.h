@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Retso Huang. All rights reserved.
 //
 
-#import <UIMSDK/UIMClient.h>
+#import "UIMClient.h"
 
 @interface UIMSDKService : NSObject
 
