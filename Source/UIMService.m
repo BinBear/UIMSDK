@@ -81,8 +81,6 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
 @property (nonatomic, strong, readonly) AFHTTPSessionManager *sessionManager;
 @property (nonatomic, strong, readonly) NSString *tenantId;
 @property (nonatomic, strong) NSString *instantId;
-@property (nonatomic, strong) NSTimer *reconnectTimer;
-@property (nonatomic) NSInteger reconnectCount;
 
 ///--------------------
 /// @name Signals
@@ -236,30 +234,13 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
   [self.hubProxy on:UIMHubEventNameLeave
             perform:self
            selector:@selector(memberLeaveChatWithId:info:)];
-  [self.hubConnection start:nil];
-}
-
-- (void)reconnect {
-#ifdef DEBUG
-  NSLog(@"Reconect %@ times, total %d.", @(self.reconnectCount + 1), 5);
-#endif
-  self.connectionState = UIMClientConnecttionStateReconnecting;
-  self.reconnectCount++;
   [self.hubConnection start];
 }
 
 - (void)disconnect {
   [self endChat];
-  self.reconnectCount = 0;
   self.instantId = nil;
   [self.hubConnection disconnect];
-}
-
-- (void)disconnectdHelper {
-  self.hubConnection = nil;
-  self.hubProxy = nil;
-  self.instantId = nil;
-  self.connectionState = UIMClientConnecttionStateDisconnected;
 }
 
 #pragma mark - Chat
@@ -416,26 +397,10 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
 }
 
 #pragma mark - SRConnectionDelegate
-- (void)SRConnectionDidClose:(id<SRConnectionInterface>)connection {
-  if (connection == self.hubConnection) {
-    if (self.instantId.length == 0) {
-      [self disconnectdHelper];
-    } else {
-      if (self.reconnectCount < 12) {
-        if (!self.reconnectTimer.isValid) {
-          self.reconnectTimer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(reconnect) userInfo:nil repeats:true];
-        }
-      } else {
-        [self disconnectdHelper];
-      }
-    }
-  }
-}
 - (void)SRConnectionDidReconnect:(id<SRConnectionInterface>)connection {
   if (self.instantId) {
     [self.hubProxy invoke:UIMHubEventNameReconnected
                  withArgs:@[self.tenantId, self.instantId]];
-    self.reconnectCount = 0;
   }
 }
 - (void)SRConnection:(id<SRConnectionInterface>)connection didChangeState:(connectionState)oldState newState:(connectionState)newState {
