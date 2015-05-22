@@ -106,7 +106,6 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
 - (void)queuePositionResponseWithChatId:(NSString *)chatId queuePosition:(NSString *)queuePosition;
 - (void)receiveMessageWithInstentId:(NSString *)instantId
                            userInfo:(NSDictionary *)userInfo;
-- (void)disconnectdHelper;
 @end
 
 #pragma clang diagnostic push
@@ -177,7 +176,7 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
       self.instantId = tuple.first;
     }];
     
-    self.disconnectSignal = [self rac_signalForSelector:@selector(disconnectdHelper)];
+    self.disconnectSignal = [self rac_signalForSelector:@selector(SRConnectionDidClose:)];
     
     [self.disconnectSignal subscribeNext:^(id x) {
       self.hubConnection = nil;
@@ -416,8 +415,6 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
         self.connectionState = UIMClientConnecttionStateConnecting;
         break;
       case reconnecting:
-        [connection disconnect];
-        NSLog(@"reconnecting");
         self.connectionState = UIMClientConnecttionStateReconnecting;
         break;
       default:

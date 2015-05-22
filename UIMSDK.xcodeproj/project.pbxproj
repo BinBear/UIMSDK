@@ -84,11 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				F20A6D981B04F8DA00A042B9 /* Class */,
-				F20A6D781B04F88D00A042B9 /* AppDelegate.h */,
-				F20A6D791B04F88D00A042B9 /* AppDelegate.m */,
-				F20A6D7E1B04F88D00A042B9 /* Main.storyboard */,
-				F20A6D811B04F88D00A042B9 /* Images.xcassets */,
-				F20A6D831B04F88D00A042B9 /* LaunchScreen.xib */,
 				F20A6D741B04F88D00A042B9 /* Supporting Files */,
 			);
 			path = UIMDemo;
@@ -97,6 +92,11 @@
 		F20A6D741B04F88D00A042B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F20A6D7E1B04F88D00A042B9 /* Main.storyboard */,
+				F20A6D831B04F88D00A042B9 /* LaunchScreen.xib */,
+				F20A6D811B04F88D00A042B9 /* Images.xcassets */,
+				F20A6D781B04F88D00A042B9 /* AppDelegate.h */,
+				F20A6D791B04F88D00A042B9 /* AppDelegate.m */,
 				F20A6D751B04F88D00A042B9 /* Info.plist */,
 				F20A6D761B04F88D00A042B9 /* main.m */,
 			);
