@@ -22,16 +22,16 @@
   return sharedInstance;
 }
 
-#pragma mark - Life Cycle
-
+#pragma mark - Initialzier
 - (instancetype)init {
   self = [super init];
   if (self) {
-    
-    self.client = [[UIMClient alloc] initWithTenantId:@"CA"];
   }
   return self;
 }
 
+- (void)startServiceWithCompanyName:(NSString *)company {
+  self.client = [[UIMClient alloc] initWithTenantId:company];
+}
 
 @end
