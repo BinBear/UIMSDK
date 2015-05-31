@@ -18,4 +18,6 @@
  */
 + (instancetype)sharedService;
 
+- (void)startServiceWithCompanyName:(NSString *)company;
+
 @end

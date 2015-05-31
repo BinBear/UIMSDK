@@ -13,7 +13,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 
 ///--------------------
-/// @name View Controller
+/// @name View Model
 ///--------------------
 #import "UIMSDKService.h"
 
@@ -79,7 +79,7 @@
 }
 
 - (void)clientDidDisconnect:(UIMClient *)client {
-  NSLog(@"Client did disconnect");
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)uimclientConnectionDidChangeState:(UIMClientConnecttionState)state {
@@ -137,7 +137,7 @@
   }
 }
 
-#pragma mark - User Control Events
+#pragma mark - Interactive
 - (IBAction)connectBarButtonTapped:(id)sender {
   if ([[UIMSDKService sharedService] client].uim_connectionState == UIMClientConnecttionStateConnected) {
     [self beginChat];

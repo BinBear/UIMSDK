@@ -18,6 +18,7 @@
 		F20A6DA21B04F8DA00A042B9 /* UIMSDKService.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D9F1B04F8DA00A042B9 /* UIMSDKService.m */; };
 		F255F87E1B0517850041C245 /* UIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F20816671AF9F71C001076F0 /* UIMService.m */; };
 		F255F87F1B0517880041C245 /* UIMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F20816651AF9F71C001076F0 /* UIMClient.m */; };
+		F2BD11191B19ADB90077576D /* UIMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BD11181B19ADB90077576D /* UIMSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		F20A6D9E1B04F8DA00A042B9 /* UIMSDKService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMSDKService.h; sourceTree = "<group>"; };
 		F20A6D9F1B04F8DA00A042B9 /* UIMSDKService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMSDKService.m; sourceTree = "<group>"; };
 		F2B73A551AE93867009AFCE9 /* UIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMClient.h; sourceTree = "<group>"; };
+		F2BD11171B19ADB90077576D /* UIMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMSettingViewController.h; sourceTree = "<group>"; };
+		F2BD11181B19ADB90077576D /* UIMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMSettingViewController.m; sourceTree = "<group>"; };
 		F2CED4941A61AA50001B9B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +123,8 @@
 				F20A6D9D1B04F8DA00A042B9 /* UIMIOSViewController.m */,
 				F20A6D9E1B04F8DA00A042B9 /* UIMSDKService.h */,
 				F20A6D9F1B04F8DA00A042B9 /* UIMSDKService.m */,
+				F2BD11171B19ADB90077576D /* UIMSettingViewController.h */,
+				F2BD11181B19ADB90077576D /* UIMSettingViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				F20A6DA01B04F8DA00A042B9 /* UIMIOSMessagesViewController.m in Sources */,
 				F20A6D771B04F88D00A042B9 /* main.m in Sources */,
 				F20A6DA21B04F8DA00A042B9 /* UIMSDKService.m in Sources */,
+				F2BD11191B19ADB90077576D /* UIMSettingViewController.m in Sources */,
 				F255F87F1B0517880041C245 /* UIMClient.m in Sources */,
 				F20A6DA11B04F8DA00A042B9 /* UIMIOSViewController.m in Sources */,
 			);
