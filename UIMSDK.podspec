@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UIMSDK"
-  s.version      = "1.9.9"
+  s.version      = "2.0.0"
   s.summary      = "SignalR framework create by devpro."
   s.homepage     = "https://github.com/retsohuang/UIMSDK"
   s.license      = "Apache License 2.0"
@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.source_files = "Source", "Source/Public/*.h"
   s.public_header_files = "Source/Public/*.h"
   s.requires_arc = true
-  s.dependency "SignalR-ObjC", "2.0.0.alpha1"
-  s.dependency "ReactiveCocoa"
+  s.dependency "SignalR-ObjC", "~> 2.0.0.alpha1"
+  s.dependency "ReactiveObjC"
 end
