@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89433FCFEF30F3F3340050B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992457CD6978E47D681F11B6 /* libPods.a */; };
+		CA973875E3074C18904B004D /* libPods-UIMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C587C03EFADEBB1C1CE129 /* libPods-UIMDemo.a */; };
 		F20A6D771B04F88D00A042B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D761B04F88D00A042B9 /* main.m */; };
 		F20A6D7A1B04F88D00A042B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A6D791B04F88D00A042B9 /* AppDelegate.m */; };
 		F20A6D801B04F88D00A042B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20A6D7E1B04F88D00A042B9 /* Main.storyboard */; };
@@ -22,12 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57A786F502D324111E12BAB2 /* libPods-UIMSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIMSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		660EE13649365F228D23D58E /* Pods-UIMSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIMSDKTests/Pods-UIMSDKTests.release.xcconfig"; sourceTree = "<group>"; };
-		7CC3FF33C05B2B430070EC68 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		992457CD6978E47D681F11B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB790C80B3DE54C95C9E13F3 /* Pods-UIMSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIMSDKTests/Pods-UIMSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		051912852F79714C733DF8AA /* Pods-UIMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIMDemo/Pods-UIMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		95C587C03EFADEBB1C1CE129 /* libPods-UIMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F19EC582DE950BDAF2FC0EC9 /* Pods-UIMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIMDemo/Pods-UIMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F20816651AF9F71C001076F0 /* UIMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMClient.m; path = Source/UIMClient.m; sourceTree = SOURCE_ROOT; };
 		F20816661AF9F71C001076F0 /* UIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMService.h; path = Source/UIMService.h; sourceTree = SOURCE_ROOT; };
 		F20816671AF9F71C001076F0 /* UIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMService.m; path = Source/UIMService.m; sourceTree = SOURCE_ROOT; };
@@ -56,29 +53,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89433FCFEF30F3F3340050B4 /* libPods.a in Frameworks */,
+				CA973875E3074C18904B004D /* libPods-UIMDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		42BED76E2326211E0A7C0FD2 /* Pods */ = {
+		70B067490EA8DE11C5139F59 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */,
-				7CC3FF33C05B2B430070EC68 /* Pods.release.xcconfig */,
-				AB790C80B3DE54C95C9E13F3 /* Pods-UIMSDKTests.debug.xcconfig */,
-				660EE13649365F228D23D58E /* Pods-UIMSDKTests.release.xcconfig */,
+				F19EC582DE950BDAF2FC0EC9 /* Pods-UIMDemo.debug.xcconfig */,
+				051912852F79714C733DF8AA /* Pods-UIMDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		82C469B738E2450DF57B6305 /* Frameworks */ = {
+		72882F5C2DF06C4601DC6759 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				992457CD6978E47D681F11B6 /* libPods.a */,
-				57A786F502D324111E12BAB2 /* libPods-UIMSDKTests.a */,
+				95C587C03EFADEBB1C1CE129 /* libPods-UIMDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,8 +156,8 @@
 				F2CED4921A61AA50001B9B25 /* UIMSDK */,
 				F20A6D731B04F88D00A042B9 /* UIMDemo */,
 				F2CED4911A61AA50001B9B25 /* Products */,
-				42BED76E2326211E0A7C0FD2 /* Pods */,
-				82C469B738E2450DF57B6305 /* Frameworks */,
+				70B067490EA8DE11C5139F59 /* Pods */,
+				72882F5C2DF06C4601DC6759 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,11 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F20A6D961B04F88D00A042B9 /* Build configuration list for PBXNativeTarget "UIMDemo" */;
 			buildPhases = (
-				8CF4F8DBDD40B0B140134C16 /* Check Pods Manifest.lock */,
+				F0018F9E681481496DBF3ED4 /* [CP] Check Pods Manifest.lock */,
 				F20A6D6E1B04F88D00A042B9 /* Sources */,
 				F20A6D6F1B04F88D00A042B9 /* Frameworks */,
 				F20A6D701B04F88D00A042B9 /* Resources */,
-				5FEA0928091F00727D42354C /* Copy Pods Resources */,
+				4C28CF12BD6B2B27396A9A6A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,11 +214,13 @@
 		F2CED4871A61AA50001B9B25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Retso Huang";
 				TargetAttributes = {
 					F20A6D711B04F88D00A042B9 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 42M2D7SKCJ;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -260,34 +256,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5FEA0928091F00727D42354C /* Copy Pods Resources */ = {
+		4C28CF12BD6B2B27396A9A6A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UIMDemo/Pods-UIMDemo-resources.sh",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesCollectionViewCellIncoming.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesCollectionViewCellOutgoing.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesLoadEarlierHeaderView.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesToolbarContentView.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.xib",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesCollectionViewCellIncoming.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesCollectionViewCellOutgoing.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesLoadEarlierHeaderView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesToolbarContentView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSQMessagesTypingIndicatorFooterView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIMDemo/Pods-UIMDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8CF4F8DBDD40B0B140134C16 /* Check Pods Manifest.lock */ = {
+		F0018F9E681481496DBF3ED4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIMDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -332,40 +348,48 @@
 /* Begin XCBuildConfiguration section */
 		F20A6D921B04F88D00A042B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7BFEB82D46CC2DA02469844 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F19EC582DE950BDAF2FC0EC9 /* Pods-UIMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Retso Huang (HDE8DFEJF5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 42M2D7SKCJ;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = UIMDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.retsohuang.UIMSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73358578-f531-4f2d-99be-fc01a1b5b721";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		F20A6D931B04F88D00A042B9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC3FF33C05B2B430070EC68 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 051912852F79714C733DF8AA /* Pods-UIMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Retso Huang (HDE8DFEJF5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 42M2D7SKCJ;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = UIMDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.retsohuang.UIMSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73358578-f531-4f2d-99be-fc01a1b5b721";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -377,21 +401,33 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -422,13 +458,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -437,6 +483,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

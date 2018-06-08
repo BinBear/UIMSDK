@@ -3,7 +3,8 @@
 //  UIMSDK
 //
 //  Created by Retso Huang on 1/14/15.
-//  Copyright (c) 2015 Retso Huang. All rights reserved.
+//  Modified by Retso Huang on Jun 8 2018
+//  Copyright (c) 2018 Retso Huang. All rights reserved.
 //
 
 #import "UIMService.h"
@@ -11,8 +12,8 @@
 ///--------------------
 /// @name Frameworks
 ///--------------------
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import <ReactiveCocoa/RACEXTScope.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACEXTScope.h>
 #import <SignalR-ObjC/SignalR.h>
 #import <SignalR-ObjC/SRLongPollingTransport.h>
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
@@ -201,18 +202,20 @@ static NSTimeInterval const UIMTimeoutInterval = 180;
   self.manager.requestSerializer = requestSerializer;
   
   NSURLSessionConfiguration *sessionConfiguration;
-  if ([[[UIDevice currentDevice] systemVersion] floatValue] > 7.0) {
-    sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfiguration:UIMNSURLBackgroundSessionConfigurationIdentifier];
+  
+  if (@available(iOS 8.0, *)) {
+    sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:UIMNSURLBackgroundSessionConfigurationIdentifier];
   } else {
     sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:UIMNSURLBackgroundSessionConfigurationIdentifier];
   }
+
   sessionConfiguration.timeoutIntervalForResource = UIMTimeoutInterval;
   _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL sessionConfiguration:sessionConfiguration];
   
   ///--------------------
   /// @name SignalR connection initialize
   ///--------------------
-  self.hubConnection = [SRHubConnection connectionWithURL:urlString query:@{@"tenant": self.tenantId}];
+  self.hubConnection = [SRHubConnection connectionWithURLString:urlString queryString:@{@"tenant": self.tenantId}];
   self.hubConnection.delegate = self;
   self.hubProxy = [self.hubConnection createHubProxy:UIMHubProxyName];
   [self.hubProxy on:UIMHubEventNameChatCreated

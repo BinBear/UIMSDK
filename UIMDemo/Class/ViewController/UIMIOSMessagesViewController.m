@@ -15,7 +15,7 @@
 #import <NSArray+SafeAccess/NSArray+SafeAccess.h>
 #import <UIActionSheet-Blocks/UIActionSheet+Blocks.h>
 #import <MRProgress/MRProgressOverlayView.h>
-#import <ReactiveCocoa/RACEXTScope.h>
+#import <ReactiveObjC/RACEXTScope.h>
 
 ///--------------------
 /// @name Service
@@ -293,7 +293,7 @@
 - (void)cancelChatButtonTapped {
   [[[UIMSDKService sharedService] client] uim_endChat];
 }
-- (void)performBlock:(void(^)())block afterDelay:(NSTimeInterval)delay {
+- (void)performBlock:(void(^)(void))block afterDelay:(NSTimeInterval)delay {
   dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC));
   dispatch_after(popTime, dispatch_get_main_queue(), block);
 }

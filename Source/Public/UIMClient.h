@@ -3,7 +3,8 @@
 //  UIMIOS Version 1.5
 //
 //  Created by Devpro on 5/4/14.
-//  Copyright (c) 2014 Devpro. All rights reserved.
+//  Modified by Retso Huang on Jun 8 2018
+//  Copyright (c) 2018 Devpro. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
